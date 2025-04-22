@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="AdminDashboardPage" prefHeight="736.0" prefWidth="1455.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.gdse.mentalhealth.controller.AdminDashboardController">
+<AnchorPane fx:id="AdminDashboardPage" prefHeight="736.0" prefWidth="1455.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.assignment.serenity.controller.AdminDashboardController">
    <children>
       <Pane layoutX="32.0" layoutY="121.0" prefHeight="522.0" prefWidth="339.0" style="-fx-border-color: #000000; -fx-border-radius: 20;">
          <children>

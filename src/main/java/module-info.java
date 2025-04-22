@@ -1,4 +1,4 @@
-module lk.ijse.gdse.mentalhealth {
+module com.assignment.serenity {
     requires javafx.controls;
     requires javafx.fxml;
     requires com.jfoenix;
@@ -9,13 +9,13 @@ module lk.ijse.gdse.mentalhealth {
     requires jbcrypt;
     requires java.desktop;
 
-    opens lk.ijse.gdse.mentalhealth to javafx.fxml;
-    opens lk.ijse.gdse.mentalhealth.controller to javafx.fxml;
-    opens lk.ijse.gdse.mentalhealth.entity to org.hibernate.orm.core;
-    opens lk.ijse.gdse.mentalhealth.view.tdm to javafx.base;
+    opens com.assignment.serenity to javafx.fxml;
+    opens com.assignment.serenity.controller to javafx.fxml;
+    opens com.assignment.serenity.entity to org.hibernate.orm.core;
+    opens com.assignment.serenity.view.tdm to javafx.base;
 //    opens lk.ijse.gdse.mentalhealth.dto to javafx.base;
-    opens lk.ijse.gdse.mentalhealth.config to jakarta.persistence;
-    opens lk.ijse.gdse.mentalhealth.exception to javafx.base;
+    opens com.assignment.serenity.config to jakarta.persistence;
+    opens com.assignment.serenity.exception to javafx.base;
 
-    exports lk.ijse.gdse.mentalhealth;
+    exports com.assignment.serenity;
 }

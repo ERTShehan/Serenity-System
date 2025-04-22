@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="loginPage" prefHeight="609.0" prefWidth="1050.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.gdse.mentalhealth.controller.LoginPageController">
+<AnchorPane fx:id="loginPage" prefHeight="609.0" prefWidth="1050.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.assignment.serenity.controller.LoginPageController">
    <children>
       <Pane layoutX="139.0" layoutY="40.0" prefHeight="530.0" prefWidth="544.0" style="-fx-border-color: #000000; -fx-background-color: #e1eaf9;">
          <children>
