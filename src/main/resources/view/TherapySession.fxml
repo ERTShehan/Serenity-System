@@ -21,7 +21,7 @@
             </font>
         </Label>
 
-        <Pane layoutX="17.0" layoutY="50.0" prefHeight="250.0" prefWidth="884.0" style="-fx-background-radius: 10; -fx-border-radius: 10; -fx-border-color: #28c9e5;">
+        <Pane layoutX="17.0" layoutY="50.0" prefHeight="250.0" prefWidth="884.0" style="-fx-background-color: #d9d0ce;">
             <children>
                 <VBox layoutX="20.0" layoutY="20.0" spacing="15.0">
                     <children>
@@ -33,35 +33,35 @@
                                     </font>
                                 </Label>
                                 <Label fx:id="lblSessionId" minWidth="200.0" style="-fx-background-color: #d8f4f9; -fx-padding: 5 10 5 10; -fx-background-radius: 5;" />
-                            </children>
-                        </HBox>
-
-                        <HBox alignment="CENTER_LEFT" spacing="20.0">
-                            <children>
                                 <Label style="-fx-font-weight: bold;" text="Date:">
                                     <font>
                                         <Font name="System Bold" size="14.0" />
                                     </font>
                                 </Label>
                                 <DatePicker fx:id="dpSessionDate" style="-fx-background-color: #d8f4f9;" />
-
-                                <Label style="-fx-font-weight: bold; -fx-padding: 0 0 0 20;" text="Time:">
-                                    <font>
-                                        <Font name="System Bold" size="14.0" />
-                                    </font>
-                                </Label>
-                                <TextField fx:id="txtSessionTime" promptText="HH:MM" style="-fx-background-color: #d8f4f9;" />
                             </children>
                         </HBox>
 
                         <HBox alignment="CENTER_LEFT" spacing="20.0">
                             <children>
+
+                                <Label prefHeight="20.0" prefWidth="71.0" style="-fx-font-weight: bold; -fx-padding: 0 0 0 20;" text="Time:">
+                                    <font>
+                                        <Font name="System Bold" size="14.0" />
+                                    </font>
+                                </Label>
+                                <TextField fx:id="txtSessionTime" prefHeight="25.0" prefWidth="202.0" promptText="HH:MM" style="-fx-background-color: #d8f4f9;" />
                                 <Label style="-fx-font-weight: bold;" text="Status:">
                                     <font>
                                         <Font name="System Bold" size="14.0" />
                                     </font>
                                 </Label>
                                 <ComboBox fx:id="cmbStatus" prefWidth="150.0" style="-fx-background-color: #d8f4f9;" />
+                            </children>
+                        </HBox>
+
+                        <HBox alignment="CENTER_LEFT" spacing="20.0">
+                            <children>
 
                                 <Label style="-fx-font-weight: bold; -fx-padding: 0 0 0 20;" text="Patient:">
                                     <font>

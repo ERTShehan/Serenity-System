@@ -21,7 +21,7 @@
             </font>
         </Label>
 
-        <Pane layoutX="17.0" layoutY="50.0" prefHeight="250.0" prefWidth="852.0" style="-fx-background-radius: 10; -fx-border-radius: 10; -fx-border-color: #28c9e5;">
+        <Pane layoutX="17.0" layoutY="50.0" prefHeight="250.0" prefWidth="852.0" style="-fx-background-color: #d9d0ce;">
             <children>
                 <VBox layoutX="20.0" layoutY="20.0" spacing="15.0">
                     <children>
@@ -34,23 +34,23 @@
                                 </Label>
                                 <Label fx:id="lblPaymentId" minWidth="200.0" style="-fx-background-color: #d8f4f9; -fx-padding: 5 10 5 10; -fx-background-radius: 5;" />
 
-                                <Label style="-fx-font-weight: bold; -fx-padding: 0 0 0 20;" text="Date:">
+                                <Label prefHeight="20.0" prefWidth="84.0" style="-fx-font-weight: bold; -fx-padding: 0 0 0 20;" text="Date:">
                                     <font>
                                         <Font name="System Bold" size="14.0" />
                                     </font>
                                 </Label>
-                                <DatePicker fx:id="dpPaymentDate" style="-fx-background-color: #d8f4f9;" />
+                                <DatePicker fx:id="dpPaymentDate" prefHeight="25.0" prefWidth="253.0" style="-fx-background-color: #d8f4f9;" />
                             </children>
                         </HBox>
 
                         <HBox alignment="CENTER_LEFT" spacing="20.0">
                             <children>
-                                <Label style="-fx-font-weight: bold;" text="Patient:">
+                                <Label prefHeight="20.0" prefWidth="80.0" style="-fx-font-weight: bold;" text="Patient:">
                                     <font>
                                         <Font name="System Bold" size="14.0" />
                                     </font>
                                 </Label>
-                                <ComboBox fx:id="cmbPatient" prefWidth="250.0" style="-fx-background-color: #d8f4f9;" />
+                                <ComboBox fx:id="cmbPatient" prefHeight="25.0" prefWidth="204.0" style="-fx-background-color: #d8f4f9;" />
 
                                 <Label style="-fx-font-weight: bold; -fx-padding: 0 0 0 20;" text="Program:">
                                     <font>
@@ -68,14 +68,14 @@
                                         <Font name="System Bold" size="14.0" />
                                     </font>
                                 </Label>
-                                <TextField fx:id="txtAmount" prefWidth="150.0" style="-fx-background-color: #d8f4f9;" />
+                                <TextField fx:id="txtAmount" prefHeight="25.0" prefWidth="187.0" style="-fx-background-color: #d8f4f9;" />
 
                                 <Label style="-fx-font-weight: bold; -fx-padding: 0 0 0 20;" text="Payment Method:">
                                     <font>
                                         <Font name="System Bold" size="14.0" />
                                     </font>
                                 </Label>
-                                <ComboBox fx:id="cmbPaymentMethod" prefWidth="150.0" style="-fx-background-color: #d8f4f9;" />
+                                <ComboBox fx:id="cmbPaymentMethod" prefHeight="25.0" prefWidth="189.0" style="-fx-background-color: #d8f4f9;" />
                             </children>
                         </HBox>
 
@@ -108,7 +108,7 @@
             </children>
         </Pane>
 
-        <TableView fx:id="tblPayments" layoutX="20.0" layoutY="320.0" onMouseClicked="#tblPaymentsOnMouseClicked" prefHeight="288.0" prefWidth="832.0">
+        <TableView fx:id="tblPayments" layoutX="20.0" layoutY="320.0" onMouseClicked="#tblPaymentsOnMouseClicked" prefHeight="266.0" prefWidth="832.0">
             <columns>
                 <TableColumn fx:id="colPaymentId" prefWidth="120.0" text="Payment ID" />
                 <TableColumn fx:id="colDate" prefWidth="100.0" text="Date" />

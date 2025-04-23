@@ -17,7 +17,7 @@
             <Font name="System Bold" size="25.0" />
          </font>
       </Label>
-      <Pane layoutX="28.0" layoutY="61.0" prefHeight="194.0" prefWidth="907.0" style="-fx-background-radius: 10; -fx-border-radius: 10; -fx-border-color: #28c9e5;">
+      <Pane layoutX="28.0" layoutY="61.0" prefHeight="194.0" prefWidth="907.0" style="-fx-background-color: #d9d0ce;">
          <children>
             <Label layoutX="22.0" layoutY="32.0" style="-fx-text-fill: #000000;" text="Therapist ID :">
                <font>
@@ -85,7 +85,7 @@
             </HBox>
          </children>
       </Pane>
-      <TableView fx:id="tblTherapistManagement" layoutX="28.0" layoutY="284.0" onMouseClicked="#tblTherapistManagementOnMouseClicked" prefHeight="395.0" prefWidth="879.0">
+      <TableView fx:id="tblTherapistManagement" layoutX="28.0" layoutY="284.0" onMouseClicked="#tblTherapistManagementOnMouseClicked" prefHeight="359.0" prefWidth="879.0">
         <columns>
           <TableColumn fx:id="colTherapistID" prefWidth="131.19997787475586" text="Therapist ID" />
           <TableColumn fx:id="colTherapistName" prefWidth="267.99998474121094" text="Therapist Name" />

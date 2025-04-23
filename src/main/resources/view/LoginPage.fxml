@@ -4,13 +4,20 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane fx:id="loginPage" prefHeight="609.0" prefWidth="1050.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.assignment.serenity.controller.LoginPageController">
    <children>
-      <Pane layoutX="139.0" layoutY="40.0" prefHeight="530.0" prefWidth="544.0" style="-fx-border-color: #000000; -fx-background-color: #e1eaf9;">
+      <ImageView fitHeight="706.0" fitWidth="1050.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/Loginimage.jpg" />
+         </image>
+      </ImageView>
+      <Pane layoutX="253.0" layoutY="85.0" prefHeight="530.0" prefWidth="544.0" style="-fx-border-color: #000000; -fx-background-color: #e1eaf9;">
          <children>
             <Label layoutX="211.0" layoutY="61.0" prefHeight="36.0" prefWidth="128.0" style="-fx-text-fill: #224ec4;" text="Welcome !">
                <font>

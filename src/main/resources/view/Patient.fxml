@@ -19,7 +19,7 @@
             <Font name="System Bold" size="25.0" />
          </font>
       </Label>
-      <Pane layoutX="17.0" layoutY="50.0" prefHeight="246.0" prefWidth="928.0" style="-fx-background-radius: 10; -fx-border-radius: 10; -fx-border-color: #28c9e5;">
+      <Pane layoutX="17.0" layoutY="50.0" prefHeight="246.0" prefWidth="928.0" style="-fx-background-color: #d9d0ce;">
          <children>
             <Label layoutX="13.0" layoutY="32.0" style="-fx-text-fill: #000000;" text="Patient ID :">
                <font>
@@ -54,7 +54,7 @@
                   <Font name="System Bold" size="15.0" />
                </font>
             </Label>
-            <TextArea fx:id="txtMedicalHistory" layoutX="518.0" layoutY="46.0" prefHeight="110.0" prefWidth="396.0" promptText="Medical History" style="-fx-background-color: #d8f4f9;" />
+            <TextArea fx:id="txtMedicalHistory" layoutX="518.0" layoutY="46.0" prefHeight="61.0" prefWidth="406.0" promptText="Medical History" style="-fx-background-color: #d8f4f9;" />
             <HBox layoutX="477.0" layoutY="184.0" prefHeight="36.0" prefWidth="508.0" spacing="20.0" />
             <Button fx:id="btnUpdate" layoutX="407.0" layoutY="183.0" mnemonicParsing="false" onAction="#btnUpdateOnAction" prefHeight="35.0" prefWidth="111.0" style="-fx-text-fill: #ffffff; -fx-background-color: #00b42e;" text="Update">
                <font>
@@ -66,7 +66,7 @@
                   <Font name="System Bold" size="15.0" />
                </font>
             </Button>
-            <Button fx:id="btnDelete" layoutX="684.0" layoutY="183.0" mnemonicParsing="false" onAction="#btnDeleteOnAction" prefHeight="35.0" prefWidth="111.0" style="-fx-text-fill: #ffffff; -fx-background-color: #d60000;" text="Delete">
+            <Button fx:id="btnDelete" layoutX="668.0" layoutY="183.0" mnemonicParsing="false" onAction="#btnDeleteOnAction" prefHeight="35.0" prefWidth="111.0" style="-fx-text-fill: #ffffff; -fx-background-color: #d60000;" text="Delete">
                <font>
                   <Font name="System Bold" size="15.0" />
                </font>
@@ -78,7 +78,7 @@
             </Button>
          </children>
       </Pane>
-      <TableView fx:id="tblPatientManagement" layoutX="28.0" layoutY="320.0" onMouseClicked="#tblPatientManagementOnMouseClicked" prefHeight="354.0" prefWidth="908.0">
+      <TableView fx:id="tblPatientManagement" layoutX="28.0" layoutY="320.0" onMouseClicked="#tblPatientManagementOnMouseClicked" prefHeight="315.0" prefWidth="908.0">
         <columns>
           <TableColumn fx:id="colPatientID" prefWidth="126.39999008178711" text="Patient ID" />
           <TableColumn fx:id="colPatientName" prefWidth="246.40008544921875" text="Name" />

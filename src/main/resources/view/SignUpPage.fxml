@@ -9,60 +9,64 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="signUpPage" prefHeight="696.0" prefWidth="1251.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.assignment.serenity.controller.SignUpPageController">
+<AnchorPane fx:id="signUpPage" prefHeight="696.0" prefWidth="1251.0" style="-fx-background-color: #56bde3;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.assignment.serenity.controller.SignUpPageController">
    <children>
-      <Pane layoutX="121.0" layoutY="111.0" prefHeight="529.0" prefWidth="579.0" style="-fx-border-color: #000000; -fx-border-radius: 20;">
+      <Pane layoutX="271.0" layoutY="84.0">
          <children>
-            <Label layoutX="190.0" layoutY="49.0" style="-fx-text-fill: #1a8eda;" text="Create Account">
-               <font>
-                  <Font name="System Bold" size="25.0" />
-               </font>
-            </Label>
-            <Label layoutX="54.0" layoutY="127.0" style="-fx-text-fill: #000000;" text="Name :">
-               <font>
-                  <Font name="System Bold" size="15.0" />
-               </font>
-            </Label>
-            <TextField fx:id="txtName" layoutX="156.0" layoutY="119.0" prefHeight="36.0" prefWidth="370.0" promptText="Enter Your Name" />
-            <Label layoutX="54.0" layoutY="179.0" style="-fx-text-fill: #000000;" text="User Name :">
-               <font>
-                  <Font name="System Bold" size="15.0" />
-               </font>
-            </Label>
-            <TextField fx:id="txtUserName" layoutX="156.0" layoutY="171.0" prefHeight="36.0" prefWidth="370.0" promptText="Enter Your User Name" />
-            <Label layoutX="54.0" layoutY="232.0" style="-fx-text-fill: #000000;" text="Email :">
-               <font>
-                  <Font name="System Bold" size="15.0" />
-               </font>
-            </Label>
-            <TextField fx:id="txtEmail" layoutX="156.0" layoutY="224.0" prefHeight="36.0" prefWidth="370.0" promptText="Enter Your Email" />
-            <Label layoutX="54.0" layoutY="338.0" style="-fx-text-fill: #000000;" text="Role :">
-               <font>
-                  <Font name="System Bold" size="15.0" />
-               </font>
-            </Label>
-            <ComboBox fx:id="comboxRole" layoutX="156.0" layoutY="330.0" onAction="#comboxRoleOnAction" prefHeight="36.0" prefWidth="200.0" />
-            <Button fx:id="btnSignUp" layoutX="134.0" layoutY="396.0" mnemonicParsing="false" onAction="#btnSignUpOnAction" prefHeight="36.0" prefWidth="291.0" style="-fx-background-radius: 15; -fx-background-color: #0087ff; -fx-text-fill: #ffffff;" text="Sign Up">
-               <font>
-                  <Font name="System Bold" size="15.0" />
-               </font>
-            </Button>
-            <Label layoutX="161.0" layoutY="459.0" style="-fx-text-fill: #000000;" text="Already Have An Account ?">
-               <font>
-                  <Font name="System Bold Italic" size="15.0" />
-               </font>
-            </Label>
-            <Label fx:id="lblGoToSignIn" layoutX="359.0" layoutY="459.0" onMouseClicked="#lblGoToSignInOnAction" style="-fx-text-fill: #0087ff;" text="Login">
-               <font>
-                  <Font name="System Bold Italic" size="15.0" />
-               </font>
-            </Label>
-            <Label layoutX="54.0" layoutY="284.0" style="-fx-text-fill: #000000;" text="Password :">
-               <font>
-                  <Font name="System Bold" size="15.0" />
-               </font>
-            </Label>
-            <PasswordField fx:id="psPassword" layoutX="156.0" layoutY="277.0" prefHeight="36.0" prefWidth="370.0" promptText="Enter Your Password" />
+            <Pane layoutX="-7.0" prefHeight="529.0" prefWidth="579.0" style="-fx-border-color: #000000; -fx-border-radius: 20;">
+               <children>
+                  <Label layoutX="190.0" layoutY="49.0" style="-fx-text-fill: #1a8eda;" text="Create Account">
+                     <font>
+                        <Font name="System Bold" size="25.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="54.0" layoutY="127.0" style="-fx-text-fill: #000000;" text="Name :">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtName" layoutX="156.0" layoutY="119.0" prefHeight="36.0" prefWidth="370.0" promptText="Enter Your Name" />
+                  <Label layoutX="54.0" layoutY="179.0" style="-fx-text-fill: #000000;" text="User Name :">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtUserName" layoutX="156.0" layoutY="171.0" prefHeight="36.0" prefWidth="370.0" promptText="Enter Your User Name" />
+                  <Label layoutX="54.0" layoutY="232.0" style="-fx-text-fill: #000000;" text="Email :">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtEmail" layoutX="156.0" layoutY="224.0" prefHeight="36.0" prefWidth="370.0" promptText="Enter Your Email" />
+                  <Label layoutX="54.0" layoutY="338.0" style="-fx-text-fill: #000000;" text="Role :">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="comboxRole" layoutX="156.0" layoutY="330.0" onAction="#comboxRoleOnAction" prefHeight="36.0" prefWidth="200.0" />
+                  <Button fx:id="btnSignUp" layoutX="134.0" layoutY="396.0" mnemonicParsing="false" onAction="#btnSignUpOnAction" prefHeight="36.0" prefWidth="291.0" style="-fx-background-radius: 15; -fx-background-color: #0087ff; -fx-text-fill: #ffffff;" text="Sign Up">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Button>
+                  <Label layoutX="161.0" layoutY="459.0" style="-fx-text-fill: #000000;" text="Already Have An Account ?">
+                     <font>
+                        <Font name="System Bold Italic" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblGoToSignIn" layoutX="359.0" layoutY="459.0" onMouseClicked="#lblGoToSignInOnAction" style="-fx-text-fill: #0087ff;" text="Login">
+                     <font>
+                        <Font name="System Bold Italic" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="54.0" layoutY="284.0" style="-fx-text-fill: #000000;" text="Password :">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <PasswordField fx:id="psPassword" layoutX="156.0" layoutY="277.0" prefHeight="36.0" prefWidth="370.0" promptText="Enter Your Password" />
+               </children>
+            </Pane>
          </children>
       </Pane>
    </children>
