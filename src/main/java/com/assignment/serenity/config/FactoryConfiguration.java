@@ -1,9 +1,6 @@
 package com.assignment.serenity.config;
 
-import com.assignment.serenity.entity.Patient;
-import com.assignment.serenity.entity.Therapist;
-import com.assignment.serenity.entity.TherapyProgram;
-import com.assignment.serenity.entity.User;
+import com.assignment.serenity.entity.*;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
@@ -28,6 +25,7 @@ public class FactoryConfiguration {
         configuration.addAnnotatedClass(Therapist.class);
         configuration.addAnnotatedClass(TherapyProgram.class);
         configuration.addAnnotatedClass(Patient.class);
+        configuration.addAnnotatedClass(TherapySession.class);
 
         sessionFactory = configuration.buildSessionFactory();
     }

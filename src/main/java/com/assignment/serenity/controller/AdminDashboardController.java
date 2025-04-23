@@ -63,7 +63,7 @@ public class AdminDashboardController implements Initializable {
 
     @FXML
     void btnPaymentOnAction(ActionEvent event) {
-
+        navigateTo("/view/Payment.fxml");
     }
 
     @FXML
@@ -83,7 +83,7 @@ public class AdminDashboardController implements Initializable {
 
     @FXML
     void btnTherapySessionOnAction(ActionEvent event) {
-
+        navigateTo("/view/TherapySession.fxml");
     }
 
     @Override
