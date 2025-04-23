@@ -77,7 +77,7 @@ public class PatientBOImpl implements PatientBO {
     public ArrayList<Patient> loadAllpatientsInCombo() {
         ArrayList<Patient> patients = new ArrayList<>();
         try {
-            List<Patient> allPatients = patientDAO.getAll(); // DAO method
+            List<Patient> allPatients = patientDAO.getAll();
             patients.addAll(allPatients);
         } catch (Exception e) {
             e.printStackTrace();

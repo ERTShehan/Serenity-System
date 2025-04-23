@@ -34,7 +34,7 @@ public class TherapyProgramController implements Initializable {
     private Button btnUpdate;
 
     @FXML
-    private TableColumn<TherapyProgramTM, Integer> colDuration;
+    private TableColumn<TherapyProgramTM, String> colDuration;
 
     @FXML
     private TableColumn<TherapyProgramTM, Double> colFee;
@@ -146,7 +146,7 @@ public class TherapyProgramController implements Initializable {
     void btnSaveOnAction(ActionEvent event) {
         String programId = lblProgramID.getText();
         String programName = textName.getText();
-        int duration = Integer.parseInt(textDuration.getText());
+        String duration = textDuration.getText();
         double fee = Double.parseDouble(txtFee.getText());
 
         TherapyProgramDTO therapyProgramDTO = new TherapyProgramDTO(programId, programName, duration, fee);
@@ -170,7 +170,7 @@ public class TherapyProgramController implements Initializable {
     void btnUpdateOnAction(ActionEvent event) {
         String programId = lblProgramID.getText();
         String programName = textName.getText();
-        int duration = Integer.parseInt(textDuration.getText());
+        String duration = textDuration.getText();
         double fee = Double.parseDouble(txtFee.getText());
 
         TherapyProgramDTO therapyProgramDTO = new TherapyProgramDTO(programId, programName, duration, fee);
@@ -196,7 +196,7 @@ public class TherapyProgramController implements Initializable {
         if (selectedItem != null) {
             lblProgramID.setText(selectedItem.getProgramId());
             textName.setText(selectedItem.getProgramName());
-            textDuration.setText(String.valueOf(selectedItem.getDuration()));
+            textDuration.setText(selectedItem.getDuration());
             txtFee.setText(String.valueOf(selectedItem.getFee()));
         }
     }

@@ -30,13 +30,13 @@ public class TherapistDAOImpl implements TherapistDAO {
         Session session = factoryConfiguration.getSession();
         Transaction transaction = session.beginTransaction();
         try {
-            // Check if the therapist already exists
+            // Check therapist
             Therapist existingTherapist = session.get(Therapist.class, entity.getTherapistID());
             if (existingTherapist != null) {
                 throw new DuplicateException("Therapist ID already exists");
             }
 
-            session.persist(entity); // Save the new therapist
+            session.persist(entity); // Save
             transaction.commit();
             return true;
         } catch (Exception e) {
@@ -100,17 +100,23 @@ public class TherapistDAOImpl implements TherapistDAO {
 
     @Override
     public String getNextId() {
-        Session session = factoryConfiguration.getSession();
-        // Get the last therapist ID from the database
-        String lastId = session.createQuery("SELECT t.id FROM Therapist t ORDER BY t.id DESC", String.class)
-                .setMaxResults(1)
-                .getSingleResult();
+        try (Session session = factoryConfiguration.getSession()) {
+            String lastId = session.createQuery(
+                            "SELECT t.therapistID FROM Therapist t ORDER BY t.therapistID DESC",
+                            String.class)
+                    .setMaxResults(1)
+                    .uniqueResult();
 
-        if (lastId != null) {
-            int numericPart = Integer.parseInt(lastId.split("-")[1]) + 1; // Assuming ID format is "T001", "T002", etc.
-            return String.format("T00-%03d", numericPart); // Format the new ID as "T00X"
-        } else {
-            return "T00-001"; // If no therapists exist, start with the first ID
+            if (lastId != null) {
+                String numericPart = lastId.substring(3); // Assuming format "T00-001"
+                int nextNum = Integer.parseInt(numericPart) + 1;
+                return String.format("T00-%03d", nextNum);
+            } else {
+                return "T00-001";
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            return "T00-001";
         }
     }
 }

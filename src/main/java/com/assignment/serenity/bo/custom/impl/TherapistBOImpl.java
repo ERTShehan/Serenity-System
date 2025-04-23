@@ -53,6 +53,11 @@ public class TherapistBOImpl implements TherapistBO {
 
     @Override
     public String getNaxtTherapistID() {
-        return therapistDAO.getNextId();
+        try {
+            return therapistDAO.getNextId();
+        } catch (Exception e) {
+            e.printStackTrace();
+            return "T00-001";
+        }
     }
 }

@@ -11,6 +11,6 @@ import lombok.NoArgsConstructor;
 public class TherapyProgramDTO {
     private String programId;
     private String programName;
-    private int duration;
+    private String duration;
     private double fee;
 }

@@ -169,19 +169,22 @@ public class TherapistManagementController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        // Initialize the table columns and other UI components here
         colTherapistID.setCellValueFactory(new PropertyValueFactory<>("therapistID"));
         colTherapistName.setCellValueFactory(new PropertyValueFactory<>("therapistName"));
         colTherapistSpecialty.setCellValueFactory(new PropertyValueFactory<>("specialization"));
         colTherapistAvailability.setCellValueFactory(new PropertyValueFactory<>("availability"));
 
-        // Load data into the table
         loadTherapists();
-//        generateNewId();
+        generateNewId();
     }
 
     private void generateNewId() {
-        lblTherapistID.setText(therapistBO.getNaxtTherapistID());
+        try {
+            lblTherapistID.setText(therapistBO.getNaxtTherapistID());
+        } catch (Exception e) {
+            showAlert("Error", "Failed to generate therapist ID", Alert.AlertType.ERROR);
+            lblTherapistID.setText("T00-001");
+        }
     }
 
     private void loadTherapists() {

@@ -25,12 +25,12 @@ public class TherapyProgram {
     private String programName;
 
     @Column(nullable = false)
-    private int duration;
+    private String duration;
 
     @Column(nullable = false)
     private double fee;
 
-    public <E> TherapyProgram(String programId, String programName, int duration, double fee, ArrayList<E> es, ArrayList<E> es1) {
+    public <E> TherapyProgram(String programId, String programName, String duration, double fee, ArrayList<E> es, ArrayList<E> es1) {
         this.programId = programId;
         this.programName = programName;
         this.duration = duration;
