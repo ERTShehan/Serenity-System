@@ -13,9 +13,9 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class AdminDashboardController implements Initializable {
+public class DashboardController implements Initializable {
 
-    private static AdminDashboardController instance;
+    private static DashboardController instance;
     private Role currentUserRole;
 
     @FXML
@@ -45,11 +45,11 @@ public class AdminDashboardController implements Initializable {
     @FXML
     private Button btnTherapySession;
 
-    public AdminDashboardController() {
+    public DashboardController() {
         instance = this;
     }
 
-    public static AdminDashboardController getInstance() {
+    public static DashboardController getInstance() {
         return instance;
     }
 
@@ -89,7 +89,7 @@ public class AdminDashboardController implements Initializable {
 
     @FXML
     void btnReportingOnAction(ActionEvent event) {
-
+        navigateTo("/view/Reports.fxml");
     }
 
     @FXML

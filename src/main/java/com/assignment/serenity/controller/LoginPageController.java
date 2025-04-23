@@ -88,7 +88,7 @@ public class LoginPageController {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/AdminDashboard.fxml"));
             AnchorPane dashboard = loader.load();
 
-            AdminDashboardController controller = loader.getController();
+            DashboardController controller = loader.getController();
             controller.setCurrentUserRole(role);
 
             loginPage.getChildren().clear();
