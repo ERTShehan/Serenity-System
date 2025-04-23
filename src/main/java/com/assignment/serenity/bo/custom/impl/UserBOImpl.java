@@ -15,11 +15,11 @@ public class UserBOImpl implements UserBo{
     @Override
     public boolean registerUser(String name, String userName, String email, String password, Role role) {
         if (userDAO.getUserByUsername(userName) != null) {
-            return false; // User already exists
+            return false;
         }
 
         String hashedPassword = PasswordEncryptionUtil.hashPassword(password);
-        String newUserId = userDAO.getNextId(); // Generate new ID
+        String newUserId = userDAO.getNextId(); // new id akak genarate kirima
         User user = new User(newUserId, name, userName, email, hashedPassword, role);
         userDAO.save(user);
         return true;

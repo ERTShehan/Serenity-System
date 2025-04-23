@@ -74,10 +74,10 @@ public class TherapySessionDAOImpl implements TherapySessionDAO {
         try (Session session = factoryConfiguration.getSession()) {
             Query<TherapySession> query = session.createQuery("FROM TherapySession", TherapySession.class);
             List<TherapySession> sessions = query.getResultList();
-            return sessions != null ? sessions : new ArrayList<>(); // Ensure we never return null
+            return sessions != null ? sessions : new ArrayList<>();
         } catch (Exception e) {
             e.printStackTrace();
-            return new ArrayList<>(); // Return empty list on error
+            return new ArrayList<>();
         }
     }
 

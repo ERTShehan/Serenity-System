@@ -32,7 +32,7 @@ public class LoginPageController {
     @FXML
     private TextField txtLoginUsername;
 
-    private final AuthService authService = new AuthService(); // Injecting AuthService
+    private final AuthService authService = new AuthService();
 
     private boolean isPasswordVisible = false;
 
@@ -57,14 +57,13 @@ public class LoginPageController {
 
     @FXML
     void lblCreateAccountOnMouseClicked(MouseEvent event) throws IOException {
-//        loadUI("/view/SignUpPage.fxml");
         loginPage.getChildren().clear();
         loginPage.getChildren().add(FXMLLoader.load(getClass().getResource("/view/SignUpPage.fxml")));
     }
 
     @FXML
     void lblForgotPasswordOnMouseClicked(MouseEvent event) {
-
+        showAlert("Info", "Contact developer", Alert.AlertType.INFORMATION);
     }
 
     private void loadUI(String resource) {
@@ -84,13 +83,20 @@ public class LoginPageController {
         alert.showAndWait();
     }
 
-    private void navigateToDashBoard (Role role) {
-        if (role == Role.ADMIN) {
-            loadUI("/view/AdminDashboard.fxml");
-        } else if (role == Role.RECEPTIONIST) {
-//            loadUI("/view/ReceptionistDashboard.fxml");
-        } else {
-            showAlert("Error", "Unauthorized access!", Alert.AlertType.ERROR);
+    private void navigateToDashBoard(Role role) {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/AdminDashboard.fxml"));
+            AnchorPane dashboard = loader.load();
+
+            AdminDashboardController controller = loader.getController();
+            controller.setCurrentUserRole(role);
+
+            loginPage.getChildren().clear();
+            loginPage.getChildren().add(dashboard);
+
+        } catch (IOException e) {
+            showAlert("Error", "Failed to load dashboard!", Alert.AlertType.ERROR);
+            e.printStackTrace();
         }
     }
 

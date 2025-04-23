@@ -49,7 +49,7 @@ public class TherapySessionBOImpl implements TherapySessionBO {
         List<TherapySession> sessions = therapySessionDAO.getAll();
         ArrayList<TherapySessionDTO> sessionDTOs = new ArrayList<>();
 
-        if (sessions != null) {  // Additional null check for safety
+        if (sessions != null) {
             for (TherapySession session : sessions) {
                 sessionDTOs.add(new TherapySessionDTO(
                         session.getSessionId(),

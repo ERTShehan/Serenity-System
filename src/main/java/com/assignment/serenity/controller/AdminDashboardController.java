@@ -1,5 +1,6 @@
 package com.assignment.serenity.controller;
 
+import com.assignment.serenity.util.Role;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -15,6 +16,7 @@ import java.util.ResourceBundle;
 public class AdminDashboardController implements Initializable {
 
     private static AdminDashboardController instance;
+    private Role currentUserRole;
 
     @FXML
     private AnchorPane AdminDashboardPage;
@@ -51,9 +53,28 @@ public class AdminDashboardController implements Initializable {
         return instance;
     }
 
-    @FXML
-    void btnLogOutOnAction(ActionEvent event) {
+    public void setCurrentUserRole(Role role) {
+        this.currentUserRole = role;
+        setupRoleBasedAccess();
+    }
 
+    private void setupRoleBasedAccess() {
+        if (currentUserRole == Role.RECEPTIONIST) {
+            btnTherapist.setDisable(true);
+            btnTherapyProgram.setDisable(true);
+        } else {
+            btnTherapist.setDisable(false);
+            btnTherapyProgram.setDisable(false);
+        }
+    }
+
+    @FXML
+    void btnLogOutOnAction(ActionEvent event) throws IOException {
+        // Clear the current user role
+        this.currentUserRole = null;
+
+        AdminDashboardPage.getChildren().clear();
+        AdminDashboardPage.getChildren().add(FXMLLoader.load(getClass().getResource("/view/LoginPage.fxml")));
     }
 
     @FXML
@@ -88,7 +109,7 @@ public class AdminDashboardController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        navigateTo("/view/TherapistManagement.fxml");
+//        navigateTo("/view/TherapistManagement.fxml");
     }
 
     public void navigateTo(String fxmlPath) {
@@ -102,7 +123,7 @@ public class AdminDashboardController implements Initializable {
 
         } catch (IOException e) {
             e.printStackTrace();
-            new Alert(Alert.AlertType.ERROR, "Failed to load page!").show();
+            showAlert("Error", "Failed to load page!", Alert.AlertType.ERROR);
         }
     }
 

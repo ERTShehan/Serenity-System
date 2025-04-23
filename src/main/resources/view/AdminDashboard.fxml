@@ -48,7 +48,7 @@
                         <Font name="System Bold" size="15.0" />
                      </font>
                   </Button>
-                  <Button fx:id="btnReporting" mnemonicParsing="false" onAction="#btnReportingOnAction" prefHeight="36.0" prefWidth="249.0" style="-fx-background-color: #a3e6e8; -fx-background-radius: 15;" text="Reporting">
+                  <Button fx:id="btnReporting" mnemonicParsing="false" onAction="#btnReportingOnAction" prefHeight="36.0" prefWidth="249.0" style="-fx-background-color: #a3e6e8; -fx-background-radius: 15;" text="Report">
                      <font>
                         <Font name="System Bold" size="15.0" />
                      </font>
